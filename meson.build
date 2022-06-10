@@ -1,3 +1,5 @@
+project('budgietheme', 'c')
+
 gnome = import('gnome')
 pkgconfig = import('pkgconfig')
 
@@ -14,6 +16,9 @@ theme_deps = []
 theme_versions = [
     '3.20',
 ]
+
+dep_gtk3 = dependency('gtk+-3.0', version: '>= 3.24.0')
+dep_glib = dependency('glib-2.0', version: '>= 2.64.0')
 
 sass_depend_files = files([
     'common/_borders.scss',
